@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEATHER APP</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Remix Icon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h1><i class="ri-cloud-fill"></i>WEATHER APP</h1>
+    <div>
+      <input type="text" id="input" placeholder="Enter city name">
+      <button id="search" onclick="searchByCity()">Search</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- Current Weather Card -->
+    <div class="card weather">
+      <h2 id="city">City, Country</h2>
+      <div class="temp-box">
+        <i id="weather-icon" class="ri-cloud-line ri-4x"></i>
+        <p id="temperature">-- °C</p>
+      </div>
+      <span id="clouds">--</span>
+       
+        <p id="weather-tip" class="tip-line">Loading vibe check...</p>
+
+        <div class="weather-highlights">
+            <div class="highlight-box">
+                <i class="ri-cloud-line"></i>
+                Cloudiness: <span id="cloudiness">--</span>
+            </div>
+            <div class="highlight-box">
+                <i class="ri-windy-line"></i>
+                Wind: <span id="wind">--</span>
+            </div>
+            <div class="highlight-box">
+                <i class="ri-arrow-right-double-line"></i>
+                Pressure: <span id="pressure">--</span>
+            </div>
+            <div class="highlight-box">
+                <i class="ri-sun-line"></i>
+                Sunrise: <span id="sunrise">--</span>
+            </div>
+            <div class="highlight-box">
+                <i class="ri-moon-line"></i>
+                Sunset: <span id="sunset">--</span>
+            </div>
+            <div class="highlight-box">
+                <i class="ri-contrast-line"></i>
+                UV Index: <span id="uv">--</span>
+            </div>
+            <div class="highlight-box">
+                <i class="ri-water-percent-line"></i>
+                Humidity: <span id="humidity">--</span>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    
+    <!-- Upcoming Hourly Forecast Card -->
+    <div class="card forecstH">
+      <p class="cast-header">Upcoming Forecast</p>
+      <div class="templist">
+        <!-- Hourly forecast items added via JS -->
+      </div>
+    </div>
+  </main>
+
+  <!-- 4-Day Forecast Card -->
+  <div class="card forecstD">
+    <p class="cast-header">Next 4 Days Forecast</p>
+    <div class="weekF">
+      <!-- Daily forecast items added via JS -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
